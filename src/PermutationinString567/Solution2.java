@@ -17,8 +17,9 @@ public class Solution2 {
         int left = 0;
         for(int i = s1.length(); i < s2.length(); i++){
             if(Arrays.equals(s1Count, s2Count)) return true;
-
+            //right move forward
             s2Count[s2.charAt(i)- 'a']++;
+            //left move forward
             s2Count[s2.charAt(left) - 'a']--;
             left++;
         }
